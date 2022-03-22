@@ -1,0 +1,44 @@
+<h1>Purchase Tokens</h1>
+<input [(ngModel)]="tokens" name="tokens" type="number"/>
+&nbsp;
+<button (click)="onClick('purchase')">Purchase Tokens</button>
+
+<p *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</p>
+
+<p *ngIf="!transactions.length">
+  No transactions.
+</p>
+
+<div *ngIf="transactions.length">
+  <table>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th>Tokens</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+
+    <tr *ngFor="let transaction of transactions; index as i;">
+      <td class="transactionId">
+        {{transaction.id}}
+      </td>
+      <td>
+        <span *ngIf="transaction.type == 'purchase'" class="purchasedTokens">Purchased Tokens</span>
+        <span *ngIf="transaction.type == 'spend'" class="spentTokens">Spent Tokens</span>
+      </td>
+      <td class="transactionTokens">
+        <span *ngIf="transaction.type == 'spend'">-</span>
+        {{transaction.tokens | number}}
+      </td>
+      <td class="transactionDesc">
+        {{transaction.description}}
+      </td>
+      <td>
+        {{transaction.date | date}}
+      </td>
+    </tr>
+  </table>
+</div>

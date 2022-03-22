@@ -1,0 +1,20 @@
+<h1>Play Games</h1>
+<p class="error">
+  {{ errorMessage }}
+</p>
+<table style="width: 100%">
+  <tr>
+    <th>Game Title</th>
+    <th>Tokens</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let game of games; index as i">
+    <td>{{ game.name }}</td>
+    <td>{{ game.tokens }}</td>
+    <td>
+      <button (click)="onClick('spend', i)" class="red">
+        Play Game
+      </button>
+    </td>
+  </tr>
+</table>
