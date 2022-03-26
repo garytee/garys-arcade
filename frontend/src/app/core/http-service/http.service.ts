@@ -11,12 +11,26 @@ export class HttpService {
   constructor(private http: HttpClient) {
     this.baseUrl = environment.apiUrl;
   }
-  
+
   public getBalanceHistory(): any {
-    return this.http.get(`${this.baseUrl}/transactions`).pipe((res: any) => res || {});
+    return this.http
+      .get(`${this.baseUrl}/transactions`)
+      .pipe((res: any) => res || {});
+  }
+
+  public getBalance(): any {
+    return this.http
+      .get(`${this.baseUrl}/transactions/calcbalance`)
+      .pipe((res: any) => res || {});
   }
 
   public getGames(): any {
     return this.http.get(`${this.baseUrl}/games`).pipe((res: any) => res || {});
+  }
+
+  public postTransaction(data: any) {
+    return this.http
+      .post(`${this.baseUrl}/transactions`, data)
+      .pipe((res: any) => res || {});
   }
 }

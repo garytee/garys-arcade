@@ -9,7 +9,6 @@ import { BalanceHistoryModule } from './pages/balance-history/balance-history.mo
 import { CoreModule } from './core/core.module';
 import { GameRoomModule } from './pages/game-room/game-room.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

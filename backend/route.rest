@@ -1,0 +1,68 @@
+### GET ALL TRANSACTIONS
+GET http://localhost:3000/api/v1/transactions/
+
+
+### GET SINGLE TRANSACTION BY ID
+GET http://localhost:3000/api/v1/transactions/1
+
+
+### INSERT A NEW TRANSACTION
+POST http://localhost:3000/api/v1/transactions/
+Content-Type: application/json
+
+  {
+    "type": "spend",
+    "description": "8 Tokens Purchase",
+    "tokens": 0
+  }
+
+
+### UPDATE AN EXISTING TRANSACTION
+PUT http://localhost:3000/api/v1/transactions/3
+Content-Type: application/json
+
+  {
+    "type": "spend",
+    "description": "Played The Simpsons",
+    "tokens": 8
+  }
+
+### DELETE SINGLE TRANSACTION BY ID
+DELETE http://localhost:3000/api/v1/transactions/3
+
+
+
+
+
+
+
+
+
+### GET ALL GAMES
+GET http://localhost:3000/api/v1/games/
+
+
+### GET SINGLE GAME BY ID
+GET http://localhost:3000/api/v1/games/1
+
+
+### INSERT A NEW GAME
+POST http://localhost:3000/api/v1/games/
+Content-Type: application/json
+
+  {
+    "name": "Mortal Kombat",
+    "tokens": 6
+  }
+
+### UPDATE AN EXISTING GAME
+PUT http://localhost:3000/api/v1/games/4
+Content-Type: application/json
+
+  {
+    "name": "Mortal Kombat II",
+    "tokens": 12
+  }
+
+### DELETE SINGLE GAME BY ID
+DELETE http://localhost:3000/api/v1/games/4

@@ -8,7 +8,6 @@ export const routes: Routes = [
   {path: '', component: BalanceHistoryComponent}
 ]
 
-
 @NgModule({
   declarations: [
     BalanceHistoryComponent

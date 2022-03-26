@@ -4,7 +4,7 @@
 
 ### Clone the Repo
 
-```git@github.com:garytee/garys-arcade.git```
+```git clone git@github.com:garytee/garys-arcade.git```
 
 ### Start the Backend Express Server
 

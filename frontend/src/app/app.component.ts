@@ -15,5 +15,6 @@ export class AppComponent implements OnInit {
     /** initializes page */
     this.uiService.getBalanceHistory();
     this.uiService.getGames();
+    this.uiService.getBalance();
   }
 }
